@@ -1,0 +1,165 @@
+@font-face {
+   font-family: 'Gotham-900';
+   src: url('/public/fonts/gotham/Gotham-Black.otf');
+   fallback: sans-serif;
+}
+
+@font-face {
+   font-family: 'Gotham-800';
+   src: url('/public/fonts/gotham/Gotham-Bold.otf');
+   fallback: sans-serif;
+}
+
+@font-face {
+   font-family: 'Gotham-700';
+   src: url('/public/fonts/gotham/Gotham-Medium.otf');
+   fallback: sans-serif;
+}
+
+@font-face {
+   font-family: 'Gotham-600';
+   src: url('/public/fonts/gotham/Gotham-Book.otf');
+   fallback: sans-serif;
+}
+
+@font-face {
+   font-family: 'Gotham-500';
+   src: url('/public/fonts/gotham/Gotham-Light.otf');
+   fallback: sans-serif;
+}
+
+/* VARIABLES */
+:root {
+   --font-main-900: 'Gotham-900';
+   --font-main-800: 'Gotham-800';
+   --font-main-700: 'Gotham-700';
+   --font-main-600: 'Gotham-600';
+   --font-main-500: 'Gotham-500';
+
+   --neutral-900: hsl(220, 23%, 3%);
+   --neutral-600: hsl(220, 11%, 21%);
+   --neutral-500: hsl(220, 9%, 31%);
+   --neutral-400: hsl(220, 4%, 52%);
+   --neutral-100: hsl(220, 4%, 86%);
+   --neutral-000: hsl(100, 100%, 100%);
+}
+
+/* RESET */
+
+* {
+   margin: 0px;
+   padding: 0px;
+   box-sizing: border-box;
+   vertical-align: baseline;
+   font-family: inherit;
+   color: var(--neutral-900);
+}
+
+*::selection {
+    background-color: rgb(255, 0, 98);
+    color: var(--neutral-000)
+}
+
+body {
+   font-family: var(--font-main-500);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.container {
+   max-width: min(90%, 1000px);
+   margin: auto !important;
+}
+
+/* NAVIGATION */
+
+@layer navigation {
+   header.navigation-bar {
+      width: 100%;
+      background: var(--neutral-000);
+      padding: 0px 16px !important;
+   }
+
+   header.navigation-bar > .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0px auto !important;
+      padding: 24px 0px !important;
+   }
+
+   header.navigation-bar .nav-icon {
+      display: flex;
+      align-items: center;
+   }
+
+   header.navigation-bar .nav-icon > img {
+      size: 32px;
+      max-size: 32px;
+      width: 32px;
+      max-width: 32px;
+      height: 32px;
+      max-height: 32px;
+   }
+
+   header.navigation-bar .nav-icon h3 {
+      margin-left: 16px !important;
+      font-family: var(--font-main-900) !important;
+      font-size: 32px;
+   }
+
+   header.navigation-bar ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      list-style: none;
+   }
+
+   header.navigation-bar ul li {
+      padding: 0px 16px !important;
+      font-size: 16px;
+      font-family: var(--font-main-700);
+   }
+
+   header.navigation-bar ul li > a {
+      color: var(--neutral-500) !important;
+      text-decoration: none;
+   }
+
+   header.navigation-bar ul li > a:hover {
+      text-decoration: underline;
+      color: var(--neutral-900) !important;
+   }
+}
+
+/* INTRODUCTION */
+@layer introduction {
+    section.introduction {
+        margin-top: 48px !important;
+    }
+
+    section.introduction .container {
+        text-align: center;
+    }
+
+    section.introduction .container section.title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto !important;
+    }
+
+    section.introduction h1.hero {
+        font-size: 128px;
+        font-family: var(--font-main-900) !important;
+    }
+
+    section.introduction p {
+        font-size: 24px;
+        font-family: var(--font-main-700) !important;
+        color: var(--neutral-500) !important;
+        max-width: 1000px;
+        margin: 64px auto !important;
+    }
+}

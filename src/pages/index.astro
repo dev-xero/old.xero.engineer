@@ -1,5 +1,6 @@
 ---
 import NavigationBar from "../components/NavigationBar.astro"
+import "../styles/global.css"
 
 const pageTitle = "Xero"
 ---
@@ -14,6 +15,14 @@ const pageTitle = "Xero"
 	</head>
 	<body>
         <NavigationBar />
-		<h1>Xero's Website</h1>
+        <!-- INTRODUCTION -->
+        <section class="introduction">
+            <div class="container">
+                <section class="title">
+                    <h1 class="hero">HEY, I'M XERO!</h1>
+                    <p>I'm a first year Computer Science student interested in Android Development and Machine Learning at the moment.My hobbies include programming, drawing, playing chess and watching anime, welcome to my space on the internet :)</p>
+                </section>
+            </div>
+        </section>
 	</body>
 </html>
