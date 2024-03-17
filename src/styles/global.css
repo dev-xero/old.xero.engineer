@@ -56,8 +56,8 @@
 }
 
 *::selection {
-    background-color: rgb(255, 0, 98);
-    color: var(--neutral-000)
+   background-color: rgb(255, 0, 98);
+   color: var(--neutral-000);
 }
 
 body {
@@ -131,35 +131,65 @@ body {
       text-decoration: underline;
       color: var(--neutral-900) !important;
    }
+
+   /* RESPONSIVE: MOBILE */
+   @media screen and (max-width: 640px) {
+      header.navigation-bar > .container {
+         flex-direction: column;
+      }
+
+      header.navigation-bar ul {
+        margin-top: 24px !important;
+      }
+   }
 }
 
 /* INTRODUCTION */
 @layer introduction {
-    section.introduction {
-        margin-top: 48px !important;
-    }
+   section.introduction {
+      margin-top: 48px !important;
+   }
 
-    section.introduction .container {
-        text-align: center;
-    }
+   section.introduction .container {
+      text-align: center;
+   }
 
-    section.introduction .container section.title {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: auto !important;
-    }
+   section.introduction .container section.title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: auto !important;
+   }
 
-    section.introduction h1.hero {
-        font-size: 128px;
-        font-family: var(--font-main-900) !important;
-    }
+   section.introduction h1.hero {
+      font-size: 128px;
+      font-family: var(--font-main-900) !important;
+   }
 
-    section.introduction p {
-        font-size: 24px;
-        font-family: var(--font-main-700) !important;
-        color: var(--neutral-500) !important;
-        max-width: 1000px;
-        margin: 64px auto !important;
-    }
+   section.introduction p {
+      font-size: 24px;
+      line-height: 40px;
+      font-family: var(--font-main-700) !important;
+      color: var(--neutral-500) !important;
+      max-width: 1000px;
+      margin: 64px auto !important;
+   }
+
+   /* RESPONSIVE: MOBILE */
+   @media screen and (max-width: 640px) {
+      section.introduction {
+         margin-top: 24px !important;
+      }
+
+      section.introduction h1.hero {
+         font-size: 48px;
+         line-height: 64px;
+      }
+
+      section.introduction p {
+         font-size: 16px;
+         line-height: 30px;
+         margin: 32px auto !important;
+      }
+   }
 }
