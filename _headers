@@ -1,0 +1,10 @@
+/*
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: same-origin
+  Strict-Transport-Security: max-age=31536000
+/fonts/*
+  Cache-Control: "public, max-age=360000"
+/_astro/*
+  Cache-Control: public, max-age=604800, immutable
