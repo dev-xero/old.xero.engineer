@@ -1,40 +1,40 @@
 @font-face {
    font-family: 'Gotham-900';
-   src: url('/public/fonts/gotham/Gotham-Black.otf');
+   src: url('/fonts/gotham/Gotham-Black.otf');
    fallback: sans-serif;
 }
 
 @font-face {
    font-family: 'Gotham-800';
-   src: url('/public/fonts/gotham/Gotham-Bold.otf');
+   src: url('/fonts/gotham/Gotham-Bold.otf');
    fallback: sans-serif;
 }
 
 @font-face {
    font-family: 'Gotham-700';
-   src: url('/public/fonts/gotham/Gotham-Medium.otf');
+   src: url('/fonts/gotham/Gotham-Medium.otf');
    fallback: sans-serif;
 }
 
 @font-face {
    font-family: 'Gotham-600';
-   src: url('/public/fonts/gotham/Gotham-Book.otf');
+   src: url('/fonts/gotham/Gotham-Book.otf');
    fallback: sans-serif;
 }
 
 @font-face {
    font-family: 'Gotham-500';
-   src: url('/public/fonts/gotham/Gotham-Light.otf');
+   src: url('/fonts/gotham/Gotham-Light.otf');
    fallback: sans-serif;
 }
 
 /* VARIABLES */
 :root {
-   --font-main-900: 'Gotham-900';
-   --font-main-800: 'Gotham-800';
-   --font-main-700: 'Gotham-700';
-   --font-main-600: 'Gotham-600';
-   --font-main-500: 'Gotham-500';
+   --font-main-900: 'Gotham-900', sans-serif;
+   --font-main-800: 'Gotham-800', sans-serif;
+   --font-main-700: 'Gotham-700', sans-serif;
+   --font-main-600: 'Gotham-600', sans-serif;
+   --font-main-500: 'Gotham-500', sans-serif;
 
    --neutral-900: hsl(220, 23%, 3%);
    --neutral-600: hsl(220, 11%, 21%);
