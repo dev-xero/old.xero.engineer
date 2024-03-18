@@ -1,5 +1,8 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, getEntryBySlug } from 'astro:content';
+import NavigationBar from "../../components/NavigationBar.astro"
+import "../../styles/global.css"
+import "../../styles/log.css"
 
 export const getStaticPaths = async () => {
   const logs = await getCollection("logs") ?? [];
@@ -11,16 +14,25 @@ export const getStaticPaths = async () => {
   });
 };
 
+const { log: logSlug } = Astro.params
+const thisLog = await getEntryBySlug("logs", logSlug)
+const pageTitle = thisLog.data.title
+const { Content } = await thisLog.render()
 ---
 
 <html lang="en">
     <head>
         <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
-        <title>Document</title>
+        <title>{pageTitle}</title>
     </head>
     <body>
-        
+        <NavigationBar />
+        <div class="half-spacer" />
+        <div class="container">
+            <Content />
+        </div>
     </body>
 </html>
