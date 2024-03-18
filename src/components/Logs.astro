@@ -1,0 +1,53 @@
+---
+import { getCollection } from "astro:content"
+import LogGridItem from "./LogGridItem.astro"
+import "../styles/global.css"
+
+let allLogs = await getCollection("logs") ?? []
+const contentCount = allLogs.length
+
+console.log("damn")
+---
+
+<style>
+    section.logs {
+        margin-top: 64px;
+    }
+
+    section.logs h3 {
+        font-size: 32px;
+        font-family: var(--font-main-700)
+    }
+
+    section.logs p.sub {
+        font-size: 24px !important;
+        margin: 32px 0px 64px 0px;
+        line-height: 32px;
+        font-family: var(--font-main-600);
+        color: var(--neutral-500);
+    }
+
+    section.blog-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+        margin-top: 32px;
+    }
+</style>
+
+<section class="logs">
+    <div class="container">
+        <h3>Logs ({contentCount})</h3>
+        <p class="sub">Writings and other ramblings you may find interesting.</p>
+        <section class="blog-grid">
+           {
+            allLogs.map((log) => <LogGridItem 
+                    title={log.data.title} 
+                    description={log.data.description}
+                    banner={log.data.banner}
+                    date={log.data.date}
+                />)
+           }
+        </section>
+    </div>
+</section>
