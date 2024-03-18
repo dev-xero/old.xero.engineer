@@ -1,7 +1,7 @@
 ---
 title: "Building a space on the internet for my thoughts"
 description: "Putting down things I find interesting from time to time."
-banner: "/public/banners/01.jpg"
+banner: "/banners/02.jpg"
 date: "2024-03-17"
 tags:
     - Thoughts
