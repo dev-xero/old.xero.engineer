@@ -12,13 +12,15 @@ console.log("damn")
 ---
 
 <style>
-    section.logs {
-        margin-top: 64px;
-    }
-
     section.logs h3 {
+        margin-top: 32px;
+        padding-top: 32px !important;
         font-size: 32px;
         font-family: var(--font-main-700)
+    }
+
+    section.logs h3 a {
+        text-decoration: none !important;
     }
 
     section.logs p.sub {
@@ -32,14 +34,14 @@ console.log("damn")
     section.blog-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        column-gap: 20px;
+        column-gap: 32px;
         margin-top: 32px;
     }
 </style>
 
 <section class="logs">
     <div class="container">
-        <h3>Logs ({contentCount})</h3>
+        <h3 id="logs"><a href="#logs">Logs ({contentCount})</a></h3>
         <p class="sub">Writings and other ramblings you may find interesting.</p>
         <section class="blog-grid">
            {

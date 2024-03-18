@@ -60,6 +60,10 @@
    color: var(--neutral-000);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
    font-family: var(--font-main-500);
    display: flex;

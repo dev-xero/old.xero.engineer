@@ -33,6 +33,15 @@ const { title, description, banner, date } = Astro.props
         font-family: var(--font-main-700)
     }
 
+    .max-two {
+        width: 1fr !important;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
     .grid-item .title {
         font-size: 32px;
         font-family: var(--font-main-800) !important;
@@ -48,7 +57,7 @@ const { title, description, banner, date } = Astro.props
     .grid-item .description {
         margin: 0px !important;
         font-size: 18px;
-        line-height: 34px;
+        line-height: 24px;
         text-decoration: none !important;
         font-family: var(--font-main-700);
         color: var(--neutral-500);
@@ -60,6 +69,6 @@ const { title, description, banner, date } = Astro.props
         <img src={banner} alt="image">
         <span class="badge">{ formatDistance(date, new Date(), { addSuffix: true })}<span/>
     </div>
-    <p class="title">{title}</p>
-    <p class="description">{description}</p>
+    <p class="title max-two">{title}</p>
+    <p class="description max-two">{description}</p>
 </a>

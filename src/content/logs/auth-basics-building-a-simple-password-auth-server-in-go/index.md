@@ -1,7 +1,7 @@
 ---
 title: "Auth basics: building a jwt/password user system in Go"
 description: "Authentication, so many ways to implement, and this is just another."
-banner: "/banners/03.jpg"
+banner: "/banners/04.jpeg"
 date: "2024-03-18"
 tags:
     - Programming
