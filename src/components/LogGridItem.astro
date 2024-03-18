@@ -1,7 +1,7 @@
 ---
 import { formatDistance } from "date-fns";
 import "../styles/global.css"
-const { title, description, banner, date } = Astro.props
+const { title, description, banner, date, slug } = Astro.props
 ---
 
 <style>
@@ -71,7 +71,7 @@ const { title, description, banner, date } = Astro.props
     }
 </style>
 
-<a href="/" class="grid-item">
+<a href={slug} class="grid-item">
     <div class="image">
         <img src={banner} alt="image">
         <span class="badge">{ formatDistance(date, new Date(), { addSuffix: true })}<span/>
