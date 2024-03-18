@@ -1,9 +1,11 @@
 ---
 import { getCollection } from "astro:content"
 import LogGridItem from "./LogGridItem.astro"
+import { compareDesc } from "date-fns"
 import "../styles/global.css"
 
 let allLogs = await getCollection("logs") ?? []
+allLogs.sort((a, b) => compareDesc(a.data.date, b.data.date))
 const contentCount = allLogs.length
 
 console.log("damn")
