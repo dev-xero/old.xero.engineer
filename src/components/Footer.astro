@@ -1,0 +1,40 @@
+---
+import "../styles/global.css"
+
+const links = [
+    {base: "LinkedIn", url: "https://www.linkedin.com/in/gerald--okafor/"},
+    {base: "X", url: "https://twitter.com/xero_dev"},
+    {base: "Bluesky", url: "https://bsky.app/profile/algoxero.bsky.social"},
+    {base: "GitHub", url: "https://github.com/dev-xero"},
+    {base: "CV", url: "/pdfs/resume.pdf"},
+]
+---
+
+<style>
+    .footer {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 32px;
+    }
+
+    .footer ul {
+        list-style: none;
+        display: flex;
+    }
+
+    .footer ul li {
+        padding: 0px 16px !important;
+        position: relative;
+    }
+
+    .footer ul li a {
+        font-family: var(--font-main-600) !important;
+        color: var(--neutral-600)
+    }
+</style>
+
+<footer class="footer">
+    <ul>
+        {links.map(link => <li><a href={link.url} target="_blank">{link.base}</a></li>)}
+    </ul>
+</footer>
