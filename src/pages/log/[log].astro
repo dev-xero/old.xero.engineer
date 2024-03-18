@@ -1,0 +1,26 @@
+---
+import { getCollection } from 'astro:content';
+
+export const getStaticPaths = async () => {
+  const logs = await getCollection("logs") ?? [];
+  return logs.map((log) => {
+    return {
+      params: { log: log.data.slug },
+      props: { log },
+    };
+  });
+};
+
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Document</title>
+    </head>
+    <body>
+        
+    </body>
+</html>
