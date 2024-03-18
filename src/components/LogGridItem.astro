@@ -62,6 +62,13 @@ const { title, description, banner, date } = Astro.props
         font-family: var(--font-main-700);
         color: var(--neutral-500);
     }
+
+    @media screen and (max-width: 800px) {
+        .grid-item .image img {
+            height: 180px;
+            max-height: 180px;
+        }
+    }
 </style>
 
 <a href="/" class="grid-item">
