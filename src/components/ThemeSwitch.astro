@@ -1,0 +1,36 @@
+<style>
+   .switch-container {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+   }
+
+   .theme-switch {
+      width: 24px;
+      height: 24px;
+   }
+
+   .switch-container span {
+      margin-left: 8px;
+   }
+
+   .switch-container:hover span {
+      text-decoration: underline !important;
+   }
+
+   @media screen and (max-width: 640px) {
+      .switch-container {
+         padding-top: 24px !important;
+      }
+   }
+</style>
+
+<div class="switch-container">
+   <img
+      src="/icons/theme-switch.svg"
+      alt="theme"
+      data-theme-switch
+      class="theme-switch"
+   />
+   <span>Theme</span>
+</div>
