@@ -3,11 +3,16 @@
       display: flex;
       align-items: center;
       cursor: pointer;
+      user-select: none;
    }
 
    .theme-switch {
       width: 24px;
       height: 24px;
+   }
+
+   .switch-container.dark .theme-switch {
+      transform: scaleX(-1);
    }
 
    .switch-container span {
@@ -25,12 +30,22 @@
    }
 </style>
 
-<div class="switch-container">
-   <img
-      src="/icons/theme-switch.svg"
-      alt="theme"
-      data-theme-switch
-      class="theme-switch"
-   />
+<div class="switch-container" data-theme-switch>
+   <img src="/icons/theme-switch.svg" alt="theme" class="theme-switch" />
    <span>Theme</span>
 </div>
+
+<script>
+   document.addEventListener('DOMContentLoaded', () => {
+      const themeSwitch = document.querySelector('[data-theme-switch]')
+
+      function setSiteTheme() {
+         const theme = themeSwitch.classList.contains('dark') ? 'light' : 'dark'
+         themeSwitch.classList.toggle('dark')
+         localStorage.setItem('site-theme', theme)
+      }
+
+      themeSwitch.addEventListener('click', () => setSiteTheme())
+      themeSwitch.addEventListener('touchstart', () => setSiteTheme())
+   })
+</script>
