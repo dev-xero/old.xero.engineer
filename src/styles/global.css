@@ -150,6 +150,7 @@ body {
     header.navigation-bar {
       padding: 0px 8px !important;
     }
+    
     header.navigation-bar > .container {
       flex-direction: column;
     }

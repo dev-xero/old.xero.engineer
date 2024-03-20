@@ -20,6 +20,8 @@ const { title, description, banner, date, slug } = Astro.props
         height: 240px;
         max-height: 240px;
         display: inline-flex;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
     }
 
     .grid-item .image .badge {
@@ -65,8 +67,8 @@ const { title, description, banner, date, slug } = Astro.props
 
     @media screen and (max-width: 800px) {
         .grid-item .image img {
-            height: 180px;
-            max-height: 180px;
+            height: 200px !important;
+            max-height: 200px;
         }
     }
 </style>
