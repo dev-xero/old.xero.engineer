@@ -10,3 +10,15 @@ slug: "auth-basics-building-a-simple-password-auth-server-in-go"
 ---
 
 # Auth Basics: Building a JWT Password Authentication System in Go
+
+```go
+func initDatabaseConnection() (*sql.DB, error) {
+	db, err := database.ConnectDatabase()
+	if err != nil {
+		msg := "[FAIL]: unable to connect database"
+		return nil, fmt.Errorf("%s: %w", msg, err)
+	}
+
+	return db, nil
+}
+```
