@@ -16,8 +16,6 @@ export const getStaticPaths = async () => {
    })
 }
 
-// type LogType = Awaited<ReturnType<typeof getCollection<"logs">>[]>
-
 const thisLog = (await getEntryBySlug('logs', logSlug))
 if (!thisLog) {
     throw new Error("Log not found");
