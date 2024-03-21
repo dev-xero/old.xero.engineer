@@ -1,45 +1,57 @@
 ---
-import NavigationBar from "../components/NavigationBar.astro"
-import Logs from "../components/Logs.astro"
-import Footer from "../components/Footer.astro"
-import "../styles/global.css"
+import NavigationBar from '../components/NavigationBar.astro'
+import Logs from '../components/Logs.astro'
+import Footer from '../components/Footer.astro'
+import '../styles/global.css'
 
-const pageTitle = "Xero"
+const pageTitle = 'Xero'
 ---
 
 <style>
-    .scroll-down {
-        margin: 0px auto !important;
-    }
+   .scroll-down {
+      margin: 0px auto !important;
+   }
 
-    .scroll-down img {
-        width: 32px;
-        max-width: 32px;
-    }
+   .scroll-down img {
+      width: 32px;
+      max-width: 32px;
+   }
 </style>
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-	</head>
-	<body>
-        <NavigationBar />
-        <!-- INTRODUCTION -->
-        <section class="introduction">
-            <div class="container">
-                <section class="title">
-                    <h1 class="hero">HEY, I'M XERO!</h1>
-                    <p>I'm a first year Computer Science student interested in Android Development and Machine Learning at the moment. My hobbies include programming, drawing, playing chess and watching anime, welcome to my space on the internet :)</p>
-                </section>
-            </div>
-        </section>
-        <a href="#logs" class="scroll-down"><img src="/icons/down-arrow.svg" alt="Down" /></a>
-        <Logs />
-        <div class="spacer"></div>
-        <Footer />
-	</body>
+   <head>
+      <meta charset="utf-8" />
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <meta name="viewport" content="width=device-width" />
+      <meta name="generator" content={Astro.generator} />
+      <title>{pageTitle}</title>
+   </head>
+   <body>
+      <NavigationBar theme="light" />
+      <!-- INTRODUCTION -->
+      <section class="introduction">
+         <div class="container">
+            <section class="title">
+               <h1 class="hero">HEY, I'M XERO!</h1>
+               <p>
+                  I'm a first year Computer Science student interested in
+                  Android Development and Machine Learning at the moment. My
+                  hobbies include programming, drawing, playing chess and
+                  watching anime, welcome to my space on the internet :)
+               </p>
+            </section>
+         </div>
+      </section>
+      <a href="#logs" class="scroll-down"
+         ><img src="/icons/down-arrow.svg" alt="Down" /></a
+      >
+      <Logs />
+      <div class="spacer"></div>
+      <Footer />
+   </body>
 </html>
+
+<script>
+   import { persistTheme } from '../scripts/theme-switch'
+   persistTheme()
+</script>

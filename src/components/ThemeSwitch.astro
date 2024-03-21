@@ -11,49 +11,46 @@
       height: 24px;
    }
 
-   .switch-container.dark .theme-switch {
-      transform: scaleX(-1);
-   }
-
    .switch-container span {
       margin-left: 8px;
    }
 
    .switch-container:hover span {
-      text-decoration: underline !important;
+      text-decoration: underline;
    }
 
-   @media screen and (max-width: 640px) {
-      .switch-container {
-         padding-top: 24px !important;
-      }
+   /* DARK THEME */
+   body.dark-theme .theme-switch path {
+      fill: var(--color-neutral-000) !important;
+   }
+
+   body.dark-theme .switch-container span {
+      color: var(--color-neutral-000) !important;
    }
 </style>
 
 <div class="switch-container" data-theme-switch>
-   <img src="/icons/theme-switch.svg" alt="theme" class="theme-switch" />
+   <svg
+      class="theme-switch"
+      width="800"
+      height="800"
+      viewBox="0 0 800 800"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+   >
+      <path
+         d="M400 733.333C584.095 733.333 733.333 584.095 733.333 400C733.333 215.905 584.095 66.6665 400 66.6665C215.905 66.6665 66.6665 215.905 66.6665 400C66.6665 584.095 215.905 733.333 400 733.333ZM400 683.333V116.667C556.48 116.667 683.333 243.519 683.333 400C683.333 556.48 556.48 683.333 400 683.333Z"
+         fill="#07080A"></path>
+   </svg>
    <span>Theme</span>
 </div>
 
 <script>
+   import { setTheme } from '../scripts/theme-switch'
    document.addEventListener('DOMContentLoaded', () => {
-      const themeSwitch = document.querySelector(
+      const themeSwitcher = document.querySelector(
          '[data-theme-switch]'
-      ) as HTMLDivElement
-      const documentBody = document.querySelector('body') as HTMLElement
-
-      if (themeSwitch == null) {
-         throw new Error('Failed to load theme switch scripts.')
-      }
-
-      function setSiteTheme() {
-         const theme = themeSwitch.classList.contains('dark') ? 'light' : 'dark'
-         themeSwitch.classList.toggle('dark')
-         documentBody.classList.toggle('dark-theme')
-         localStorage.setItem('site-theme', theme)
-      }
-
-      themeSwitch.addEventListener('click', () => setSiteTheme())
-      themeSwitch.addEventListener('touchstart', () => setSiteTheme())
+      ) as HTMLElement
+      themeSwitcher.addEventListener('click', () => setTheme())
    })
 </script>

@@ -1,19 +1,25 @@
 ---
-import ThemeSwitch from "./ThemeSwitch.astro"
+import ThemeSwitch from './ThemeSwitch.astro'
 ---
 
 <header class="navigation-bar">
-    <div class="container">
-        <div class="nav-icon" onclick="location.href='/'">
-            <img src="/favicon.svg" alt="Icon">
-            <h3>XERO.</h3>
-        </div>
-        <ul>
-            <li><a href="https://github.com/dev-xero/xero.engineer" target="_blank">source code</a></li>
-            <li><a href="#logs">logs</a></li>
-            <li><a href="/projects">projects</a>
+   <div class="container">
+      <div class="nav-icon" onclick="location.href='/'">
+         <img id="nav-icon" src="/favicon-light.svg" alt="Icon" />
+         <h3>XERO.</h3>
+      </div>
+      <ul>
+         <li>
+            <a href="https://github.com/dev-xero/xero.engineer" target="_blank"
+               >source code</a
+            >
+         </li>
+         <li><a href="#logs">logs</a></li>
+         <li>
+            <a href="/projects">projects</a>
             <li><a href="/contact">contact</a></li>
+         </li>
         </ul>
         <ThemeSwitch />
-    </div>
+   </div>
 </header>

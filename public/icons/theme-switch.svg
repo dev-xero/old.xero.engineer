@@ -1,12 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="800px" height="800px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-    <title>ic_fluent_dark_theme_24_regular</title>
-    <desc>Created with Sketch.</desc>
-    <g id="🔍-Product-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="ic_fluent_dark_theme_24_regular" fill="#212121" fill-rule="nonzero">
-            <path d="M12,22 C17.5228475,22 22,17.5228475 22,12 C22,6.4771525 17.5228475,2 12,2 C6.4771525,2 2,6.4771525 2,12 C2,17.5228475 6.4771525,22 12,22 Z M12,20.5 L12,3.5 C16.6944204,3.5 20.5,7.30557963 20.5,12 C20.5,16.6944204 16.6944204,20.5 12,20.5 Z" id="🎨-Color">
-</path>
-        </g>
-    </g>
+<svg width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M400 733.333C584.095 733.333 733.333 584.095 733.333 400C733.333 215.905 584.095 66.6665 400 66.6665C215.905 66.6665 66.6665 215.905 66.6665 400C66.6665 584.095 215.905 733.333 400 733.333ZM400 683.333V116.667C556.48 116.667 683.333 243.519 683.333 400C683.333 556.48 556.48 683.333 400 683.333Z" fill="#07080A"/>
 </svg>
