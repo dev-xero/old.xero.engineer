@@ -37,7 +37,11 @@
 
 <script>
    document.addEventListener('DOMContentLoaded', () => {
-      const themeSwitch = document.querySelector('[data-theme-switch]')
+      const themeSwitch = document.querySelector('[data-theme-switch]') as HTMLDivElement
+
+      if (themeSwitch == null) {
+        throw new Error("Failed to load theme switch scripts.")
+      }
 
       function setSiteTheme() {
          const theme = themeSwitch.classList.contains('dark') ? 'light' : 'dark'
@@ -47,5 +51,6 @@
 
       themeSwitch.addEventListener('click', () => setSiteTheme())
       themeSwitch.addEventListener('touchstart', () => setSiteTheme())
+
    })
 </script>
