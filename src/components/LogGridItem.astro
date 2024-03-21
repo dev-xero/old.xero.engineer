@@ -30,13 +30,14 @@ const { title, description, banner, date, slug } = Astro.props
         bottom: 20px;
         font-size: 16px;
         padding: 8px;
+        color: var(--color-neutral-900);
         background-color: hsla(0, 0%, 100%, 0.324);
         backdrop-filter: blur(10px);
-        font-family: var(--font-main-700)
+        font-family: var(--font-paragraph)
     }
 
     .max-two {
-        width: 1fr !important;
+        width: 1fr;
         display: -webkit-box;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
@@ -46,10 +47,12 @@ const { title, description, banner, date, slug } = Astro.props
 
     .grid-item .title {
         font-size: 32px;
-        font-family: var(--font-main-800) !important;
-        margin: 8px 0px !important;
+        font-family: var(--font-subheading);
+        margin: 8px 0px;
         cursor: pointer;
-        text-decoration: none !important;
+        text-decoration: none;
+        text-align: left !important;
+        color: var(--color-neutral-900);
     }
 
     .grid-item:hover .title {
@@ -61,8 +64,9 @@ const { title, description, banner, date, slug } = Astro.props
         font-size: 18px;
         line-height: 24px;
         text-decoration: none !important;
-        font-family: var(--font-main-700);
-        color: var(--neutral-500);
+        font-family: var(--font-paragraph);
+        color: var(--color-neutral-500);
+        text-align: left !important;
     }
 
     @media screen and (max-width: 800px) {

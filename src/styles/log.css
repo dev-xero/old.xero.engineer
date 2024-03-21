@@ -1,5 +1,5 @@
 h1 {
    font-size: 64px !important;
    line-height: 80px;
-   font-family: var(--font-main-800);
+   font-family: var(--font-subheading);
 }
