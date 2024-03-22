@@ -36,6 +36,7 @@
   --color-neutral-600: hsl(220, 11%, 21%);
   --color-neutral-500: hsl(220, 9%, 31%);
   --color-neutral-400: hsl(220, 4%, 52%);
+  --color-neutral-200: hsl(220, 4%, 73%);
   --color-neutral-100: hsl(220, 4%, 86%);
   --color-neutral-000: hsl(100, 100%, 100%);
 }
@@ -240,3 +241,11 @@ body.dark-theme header.navigation-bar ul li > a {
 body.dark-theme header.navigation-bar ul li > a:hover {
   color: var(--color-neutral-000);
 }
+
+body.dark-theme section.introduction h1.hero {
+  color: var(--color-neutral-000);
+}
+
+body.dark-theme section.introduction p {
+    color: var(--color-neutral-200);
+  }

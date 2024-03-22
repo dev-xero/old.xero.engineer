@@ -10,11 +10,16 @@ const pageTitle = 'Xero'
 <style>
    .scroll-down {
       margin: 0px auto !important;
+      color: var(--color-neutral-900)
    }
 
-   .scroll-down img {
+   .scroll-down svg {
       width: 32px;
       max-width: 32px;
+   }
+
+   body.dark-theme .scroll-down {
+      color: var(--color-neutral-000);
    }
 </style>
 
@@ -42,9 +47,22 @@ const pageTitle = 'Xero'
             </section>
          </div>
       </section>
-      <a href="#logs" class="scroll-down"
-         ><img src="/icons/down-arrow.svg" alt="Down" /></a
-      >
+      <a href="#logs" class="scroll-down">
+         <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+         >
+            <path
+               stroke-linecap="round"
+               stroke-linejoin="round"
+               d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3"
+               fill="#060709"></path>
+         </svg>
+      </a>
       <Logs />
       <div class="spacer"></div>
       <Footer />
