@@ -1,8 +1,10 @@
-export function setTheme() {
+const setNextThemeColor = (dark: boolean) => {
   const documentBody = document.querySelector("body") as HTMLElement;
   const navigationBar = document.querySelector("#nav-icon") as HTMLElement;
 
-  if (!documentBody.classList.contains("dark-theme")) {
+  console.log("[log]: Dark theme on:", dark);
+
+  if (dark) {
     documentBody.classList.add("dark-theme");
     navigationBar.setAttribute("src", "/favicon-light.svg");
 
@@ -13,19 +15,16 @@ export function setTheme() {
 
     localStorage.setItem("theme", "light");
   }
+};
+
+export function setTheme() {
+  const body = document.querySelector("body") as HTMLElement;
+  setNextThemeColor(
+    !body.classList.contains("dark-theme") || false,
+  );
 }
 
 export function persistTheme() {
   let savedTheme = localStorage.getItem("theme") ?? "light";
-
-  const documentBody = document.querySelector("body") as HTMLElement;
-  const navigationBarIcon = document.querySelector("#nav-icon") as HTMLElement;
-
-  if (savedTheme == "light") {
-    documentBody.classList.remove("dark-theme");
-    navigationBarIcon.setAttribute("src", "/favicon-light.svg");
-  } else {
-    documentBody.classList.add("dark-theme");
-    navigationBarIcon.setAttribute("src", "/favicon-dark.svg");
-  }
+  setNextThemeColor(savedTheme != "light");
 }
